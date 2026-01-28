@@ -6,26 +6,26 @@
 
 @layer base {
   :root {
-    --background: 40 25% 97%;
-    --foreground: 0 0% 15%;
+    --background: 50 30% 98%;
+    --foreground: 160 70% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
+    --card-foreground: 160 70% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover-foreground: 160 70% 15%;
 
-    --primary: 43 74% 49%;
+    --primary: 160 70% 35%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 65% 27%;
+    --secondary: 15 85% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 40 20% 90%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 50 20% 92%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 40 60% 88%;
-    --accent-foreground: 0 0% 15%;
+    --accent: 50 50% 90%;
+    --accent-foreground: 160 70% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -117,17 +117,25 @@
     repeating-linear-gradient(
       45deg,
       transparent,
-      transparent 10px,
-      hsl(var(--primary) / 0.05) 10px,
-      hsl(var(--primary) / 0.05) 20px
+      transparent 15px,
+      hsl(var(--primary) / 0.08) 15px,
+      hsl(var(--primary) / 0.08) 30px
     ),
     repeating-linear-gradient(
       -45deg,
       transparent,
-      transparent 10px,
-      hsl(var(--primary) / 0.05) 10px,
-      hsl(var(--primary) / 0.05) 20px
+      transparent 15px,
+      hsl(var(--secondary) / 0.06) 15px,
+      hsl(var(--secondary) / 0.06) 30px
     );
+}
+
+.tatar-accent {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary)) 0%,
+    hsl(var(--secondary)) 100%
+  );
 }
 
 @layer utilities {

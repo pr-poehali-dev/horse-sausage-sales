@@ -55,15 +55,15 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 observe">
-              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold">
-                🏔️ Из степей Казахстана
+              <div className="inline-block px-4 py-2 tatar-accent rounded-full text-white font-semibold shadow-lg">
+                🌿 Из Татарстана с любовью
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
                 Настоящая <span className="text-primary">КАЗЫ</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Традиционная конская колбаса из натурального мяса с травяным откормом. 
-                Вековые рецепты и современное качество.
+                Традиционная татарская конская колбаса из натурального мяса с травяным откормом. 
+                Старинные рецепты татарских мастеров.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white px-8">
@@ -84,7 +84,7 @@ const Index = () => {
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-secondary text-white p-6 rounded-xl shadow-xl">
+              <div className="absolute -bottom-6 -right-6 tatar-accent text-white p-6 rounded-xl shadow-xl">
                 <div className="text-4xl font-bold">100%</div>
                 <div className="text-sm">Натуральный продукт</div>
               </div>
@@ -97,9 +97,9 @@ const Index = () => {
       <section id="about" className="py-24 bg-accent/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16 observe">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">О нашей казы</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">О нашей казы</h2>
             <p className="text-xl text-muted-foreground">
-              Вековые традиции кочевников в каждом кусочке
+              Вековые традиции татарских мастеров в каждом кусочке
             </p>
           </div>
 
@@ -108,24 +108,24 @@ const Index = () => {
               {
                 icon: 'Leaf',
                 title: 'Травяной откорм',
-                description: 'Кони пасутся на чистых степных пастбищах, питаясь только натуральными травами'
+                description: 'Кони пасутся на чистых татарских лугах, питаясь только натуральными травами и цветами'
               },
               {
                 icon: 'Award',
                 title: 'Традиционный рецепт',
-                description: 'Приготовлено по старинным казахским рецептам, передающимся из поколения в поколение'
+                description: 'Приготовлено по старинным татарским рецептам с добавлением пряных трав'
               },
               {
                 icon: 'Heart',
                 title: 'Польза для здоровья',
-                description: 'Богата белком, содержит минимум жира, источник витаминов группы B'
+                description: 'Богата белком, содержит минимум жира, источник витаминов и микроэлементов'
               }
             ].map((item, i) => (
-              <Card key={i} className="observe p-8 hover:shadow-xl transition-shadow bg-card">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                  <Icon name={item.icon} size={32} className="text-primary" />
+              <Card key={i} className="observe p-8 hover:shadow-xl transition-all hover:-translate-y-1 bg-card border-2 border-primary/10">
+                <div className="w-16 h-16 tatar-accent rounded-full flex items-center justify-center mb-6">
+                  <Icon name={item.icon} size={32} className="text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                <h3 className="text-2xl font-bold mb-4 text-primary">{item.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{item.description}</p>
               </Card>
             ))}
@@ -137,7 +137,7 @@ const Index = () => {
       <section id="gallery" className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16 observe">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Галерея</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Галерея</h2>
             <p className="text-xl text-muted-foreground">
               Взгляните на нашу продукцию
             </p>
@@ -152,7 +152,7 @@ const Index = () => {
               'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&h=600&fit=crop',
               'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=600&fit=crop'
             ].map((src, i) => (
-              <div key={i} className="observe aspect-square rounded-xl overflow-hidden hover:scale-105 transition-transform duration-500 shadow-lg">
+              <div key={i} className="observe aspect-square rounded-xl overflow-hidden hover:scale-105 transition-transform duration-500 shadow-lg border-4 border-primary/20">
                 <img src={src} alt={`Казы ${i + 1}`} className="w-full h-full object-cover" />
               </div>
             ))}
@@ -165,60 +165,64 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="observe text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Заказ и доставка</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Заказ и доставка</h2>
               <p className="text-xl text-muted-foreground">
                 Просто и удобно
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="observe p-8 bg-card">
-                <Icon name="Package" size={48} className="text-primary mb-6" />
-                <h3 className="text-2xl font-bold mb-4">Варианты упаковки</h3>
+              <Card className="observe p-8 bg-card border-2 border-primary/10 hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 tatar-accent rounded-full flex items-center justify-center mb-6">
+                  <Icon name="Package" size={32} className="text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-primary">Варианты упаковки</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-primary mt-1" />
+                    <Icon name="Check" size={20} className="text-secondary mt-1" />
                     <span>Вакуумная упаковка — 0,5 кг / 1 кг</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-primary mt-1" />
+                    <Icon name="Check" size={20} className="text-secondary mt-1" />
                     <span>Подарочная упаковка — от 2 кг</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-primary mt-1" />
+                    <Icon name="Check" size={20} className="text-secondary mt-1" />
                     <span>Оптовые партии — от 10 кг</span>
                   </li>
                 </ul>
               </Card>
 
-              <Card className="observe p-8 bg-card">
-                <Icon name="Truck" size={48} className="text-primary mb-6" />
-                <h3 className="text-2xl font-bold mb-4">Условия доставки</h3>
+              <Card className="observe p-8 bg-card border-2 border-primary/10 hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 tatar-accent rounded-full flex items-center justify-center mb-6">
+                  <Icon name="Truck" size={32} className="text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-primary">Условия доставки</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-primary mt-1" />
-                    <span>Доставка по Казахстану — 1-3 дня</span>
+                    <Icon name="Check" size={20} className="text-secondary mt-1" />
+                    <span>Доставка по России — 2-5 дней</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-primary mt-1" />
+                    <Icon name="Check" size={20} className="text-secondary mt-1" />
                     <span>Бесплатная доставка от 5 кг</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-primary mt-1" />
+                    <Icon name="Check" size={20} className="text-secondary mt-1" />
                     <span>Термоупаковка для сохранения свежести</span>
                   </li>
                 </ul>
               </Card>
             </div>
 
-            <Card className="observe mt-8 p-8 bg-primary text-white">
+            <Card className="observe mt-8 p-8 tatar-accent text-white shadow-2xl">
               <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div>
                   <h3 className="text-3xl font-bold mb-2">Готовы заказать?</h3>
                   <p className="text-white/90">Свяжитесь с нами удобным способом</p>
                 </div>
                 <div className="flex gap-4">
-                  <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                  <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 shadow-lg">
                     <Icon name="Phone" size={20} className="mr-2" />
                     Позвонить
                   </Button>
@@ -237,7 +241,7 @@ const Index = () => {
       <section id="contacts" className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16 observe">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Контакты</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Контакты</h2>
             <p className="text-xl text-muted-foreground">
               Мы всегда на связи
             </p>
@@ -248,24 +252,24 @@ const Index = () => {
               {
                 icon: 'Phone',
                 title: 'Телефон',
-                content: '+7 (777) 123-45-67'
+                content: '+7 (843) 555-12-34'
               },
               {
                 icon: 'Mail',
                 title: 'Email',
-                content: 'info@kazy.kz'
+                content: 'info@kazy-tatarstan.ru'
               },
               {
                 icon: 'MapPin',
                 title: 'Адрес',
-                content: 'г. Алматы, Казахстан'
+                content: 'г. Казань, Татарстан'
               }
             ].map((item, i) => (
-              <Card key={i} className="observe p-6 text-center hover:shadow-xl transition-shadow bg-card">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name={item.icon} size={28} className="text-primary" />
+              <Card key={i} className="observe p-6 text-center hover:shadow-xl transition-all hover:-translate-y-1 bg-card border-2 border-primary/10">
+                <div className="w-16 h-16 tatar-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name={item.icon} size={28} className="text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <h3 className="text-xl font-bold mb-2 text-primary">{item.title}</h3>
                 <p className="text-muted-foreground">{item.content}</p>
               </Card>
             ))}
@@ -274,22 +278,23 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-secondary text-white ornament-pattern">
+      <footer className="py-12 tatar-accent text-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2">
               <span className="text-3xl">🐴</span>
               <span className="text-2xl font-bold">КАЗЫ</span>
+              <span className="text-sm opacity-80">из Татарстана</span>
             </div>
             <p className="text-white/80">© 2024 Все права защищены</p>
             <div className="flex gap-4">
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+              <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 transition-colors">
                 <Icon name="Instagram" size={24} />
               </Button>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+              <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 transition-colors">
                 <Icon name="Facebook" size={24} />
               </Button>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+              <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 transition-colors">
                 <Icon name="MessageCircle" size={24} />
               </Button>
             </div>
